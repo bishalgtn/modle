@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Teams
+from .models import Visitors
 
-admin.site.register(Teams)
+admin.site.register(Visitors)
