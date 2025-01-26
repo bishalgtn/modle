@@ -22,6 +22,7 @@ class Visitors(models.Model):
 class TodoList(models.Model):
     Visitors= models.ForeignKey(Visitors,related_name='todoLists', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
+    comment = models.ManyToManyField(Comment, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at= models.DateTimeField(auto_now=True)
     created_by = models.ForeignKey(User, related_name='todoLists', on_delete=models.CASCADE)
